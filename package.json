@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "josdem",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  }
 }
