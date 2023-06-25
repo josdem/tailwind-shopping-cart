@@ -1,6 +1,6 @@
 const incrementValue = (id) => {
-  let sku = document.getElementById(id.slice(0, -1))
-  console.log("incrementValue: " + sku.value)
+  let sku = document.getElementById(id.slice(0, -1));
+  console.log("incrementValue: " + sku.value);
   if (sku.value < 10) {
     sku.value = parseInt(sku.value) + 1;
   }
@@ -11,9 +11,9 @@ const decrementValue = (id) => {
   if (sku.value > 0) {
     sku.value = parseInt(sku.value) - 1;
   }
-}
+};
 
 module.exports = {
-    incrementValue,
-    decrementValue
-}
+  incrementValue,
+  decrementValue,
+};
