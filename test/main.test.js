@@ -1,4 +1,4 @@
-const main = require("../main.js") 
+const main = require("../build/js/main.js") 
 
 test("should increment sku counter", () => {
   document.body.innerHTML = `
