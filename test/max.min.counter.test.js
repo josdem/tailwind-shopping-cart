@@ -1,6 +1,9 @@
 const main = require("../build/js/counter.js")
 
-describe("validate item increment and decrement", () => {
+const MAX_VALUE = 10
+const MIN_VALUE = 0
+
+describe("validate maximum item increment", () => {
   document.body.innerHTML = `
       <!DOCTYPE html>        
         <input id="sku100" type="number" value="0"/>
@@ -9,22 +12,28 @@ describe("validate item increment and decrement", () => {
   `
   const input = document.querySelector("#sku100")
 
-  test("should increment sku counter", () => {
+  test("should increment sku to the max value", () => {
     const button = document.querySelector("#sku100p")
     button.addEventListener("click", () => {
       main.incrementValue("sku100p")
     })
-    button.click()
 
-    expect(input.value).toBe("1")
+    Array.from(Array(20).keys()).forEach(() => {
+      button.click()
+    })
+
+    expect(input.value).toBe("10")
   })
 
-  test("should decrement sku counter", () => {
+  test("should decrement sku counter to the minimum", () => {
     const button = document.querySelector("#sku100m")
     button.addEventListener("click", () => {
       main.decrementValue("sku100m")
     })
-    button.click()
+    
+    Array.from(Array(20).keys()).forEach(() => {
+      button.click()
+    })
 
     expect(input.value).toBe("0")
   })
