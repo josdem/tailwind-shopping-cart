@@ -2,6 +2,7 @@ const main = require("../build/js/counter.js")
 
 const MAX_VALUE = "10"
 const MIN_VALUE = "0"
+const CLICK_NUMBER = 20
 
 describe("validate maximum item increment", () => {
   document.body.innerHTML = `
@@ -18,7 +19,7 @@ describe("validate maximum item increment", () => {
       main.incrementValue("sku100p")
     })
 
-    Array.from(Array(20).keys()).forEach(() => {
+    Array.from(Array(CLICK_NUMBER).keys()).forEach(() => {
       button.click()
     })
 
@@ -31,7 +32,7 @@ describe("validate maximum item increment", () => {
       main.decrementValue("sku100m")
     })
     
-    Array.from(Array(20).keys()).forEach(() => {
+    Array.from(Array(CLICK_NUMBER).keys()).forEach(() => {
       button.click()
     })
 
