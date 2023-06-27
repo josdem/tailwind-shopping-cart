@@ -20,7 +20,7 @@ describe("validate item increment and decrement", () => {
   })
 
   test("should increment sku counter", () => {
-    const button = document.querySelector("#sku100m");
+    const button = document.querySelector("#sku100m")
     button.addEventListener("click", () => {
       main.decrementValue("sku100m")
     })
