@@ -19,9 +19,7 @@ describe("validate maximum item increment", () => {
       main.incrementValue("sku100p")
     })
 
-    Array.from(Array(CLICK_NUMBER).keys()).forEach(() => {
-      button.click()
-    })
+    simulateClick(button)
 
     expect(input.value).toBe(MAX_VALUE)
   })
@@ -31,11 +29,15 @@ describe("validate maximum item increment", () => {
     button.addEventListener("click", () => {
       main.decrementValue("sku100m")
     })
-    
-    Array.from(Array(CLICK_NUMBER).keys()).forEach(() => {
-      button.click()
-    })
+
+    simulateClick(button)
 
     expect(input.value).toBe(MIN_VALUE)
   })
 })
+
+const simulateClick = (button) => {
+  Array.from(Array(CLICK_NUMBER).keys()).forEach(() => {
+    button.click()
+  })
+}
