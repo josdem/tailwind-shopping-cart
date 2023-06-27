@@ -1,4 +1,4 @@
-const main = require("../build/js/main.js")
+const main = require("../build/js/counter.js")
 
 describe("validate item increment and decrement", () => {
   document.body.innerHTML = `
