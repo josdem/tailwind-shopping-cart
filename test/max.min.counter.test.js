@@ -1,7 +1,7 @@
 const main = require("../build/js/counter.js")
 
-const MAX_VALUE = 10
-const MIN_VALUE = 0
+const MAX_VALUE = "10"
+const MIN_VALUE = "0"
 
 describe("validate maximum item increment", () => {
   document.body.innerHTML = `
@@ -22,7 +22,7 @@ describe("validate maximum item increment", () => {
       button.click()
     })
 
-    expect(input.value).toBe("10")
+    expect(input.value).toBe(MAX_VALUE)
   })
 
   test("should decrement sku counter to the minimum", () => {
@@ -35,6 +35,6 @@ describe("validate maximum item increment", () => {
       button.click()
     })
 
-    expect(input.value).toBe("0")
+    expect(input.value).toBe(MIN_VALUE)
   })
 })
