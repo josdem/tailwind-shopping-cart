@@ -28,3 +28,11 @@ npm run tailwind
 ```bash
 npm run test
 ```
+
+#### To run a single test
+
+```bash
+ npx jest -i ${TEST_FILE_NAME}
+```
+
+**where:** `${TEST_FILE_NAME}` is the file name of your test
